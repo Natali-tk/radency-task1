@@ -1,0 +1,8 @@
+@mixin font {
+  font-family: var(--second-page-font);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 1.25;
+  color: var(--primary-text-color);
+}
