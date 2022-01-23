@@ -1,14 +1,6 @@
-<div class="backdrop is-hidden" data-modal>
-  <div class="modal">
-    <div class="modal-button">
-      <button type="button" class="close-button" data-modal-close>
-        <svg class="close-button__icon" width="18" height="18">
-          <use href="./images//sprite.svg#icon-close"></use>
-        </svg>
-      </button>
-    </div>
-    <h2 class="title form">Fill Note</h2>
-    <form class="note form" >
+export default function getNewNoteModal(){
+  return `
+    <form class="note form" id="note-form">
       <input
         type="text"
         name="name"
@@ -44,11 +36,12 @@
         name="dates"
         class="note form__input"
         placeholder="Dates format DD/MM/YYYY"
-        pattern = "[0-9]{2}\[0-9]{2}\[0-9]{4}"
+        pattern="[0-9]{2}\[0-9]{2}\[0-9]{4}"
         autocomplete="off"
         id="dates"
       />
-      <button class="btn" id="btnSubmit" type="submit">Add note</button>
-    </form>
-  </div>
-</div>
+      <button class="btn" id="btn-submit" type="submit">Add note</button>
+    </form>>`;
+  
+
+}

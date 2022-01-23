@@ -6,7 +6,7 @@
     opacity: 1;
     overflow-y: auto;
     z-index:5;
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 788px) {
       max-width: 401px;
       max-height: 525px;
       padding:40px 20px;
@@ -14,15 +14,15 @@
       left:0;
     }
   
-    @media screen and (min-width: 1211px) {
+    @media screen and (min-width: 789px) {
       width: 585px;
       height: 529px;
     }
   
-    background-color: var(--white-color);
+    background-color: #e9ebf5;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
-    transition: transform 500ms var(--timing-function) 250ms;
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
     
     .backdrop.is-hidden & {
       transform: scale(0) rotateX(-90deg);
@@ -31,20 +31,20 @@
   }
   .close-button{
     position: relative;
-    width: 42px;
-    height: 42px;
+    width: 36px;
+    height: 36px;
     border: 1px solid transparent;
     border-radius: 50%;
-    background-color: var(--accent-color);
+    background-color: #616161;
   }
   .close-button__icon{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    fill: var(--white-color);  
+    fill:#fcfcfc;  
   }
-  .registration.form{
+  .note.form{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -53,7 +53,7 @@
   .modal-button{
       position: absolute;
       top:2%;
-      left:87%;
+      left:92%;
   }
   .backdrop {
     perspective: 600px;
@@ -80,4 +80,78 @@
       transition: opacity 250ms var(--timing-function) 500ms;
     }
   }
+  .title.form{
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.18;
+    color:#616161;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .note.form__desc {
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 1.25;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 24px;
+  }
+  .registration.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .note.form__select{
+    width: 406px;
+    height: 50px;
+    margin-bottom: 20px;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 1.25;
+    color:#616161;
+    background: #fcfcfc;
+    border: 1px solid #fcfcfc;
+    border-radius: 200px;
+    padding: 12px 12px 12px 26px;
+    outline: none; 
+  }
+  option {
+    font-size: 18px;
+    line-height: 1.25;
+    text-align: center;
+    outline: none; 
+    color: #9c9c9a;
+  }
+  .option-category:hover,
+  .option-category:focus{
+    background-color:#9c9c9a ;
+  }
+  .note.form__input {
+    width: 406px;
+    height: 50px;
+    margin-bottom: 20px;
+    background: #fcfcfc;
+    border: 1px solid #fcfcfc;
+    box-sizing: border-box;
+    border-radius: 200px;
+    padding: 12px 5px 12px 26px;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 1.25%;
+    color: #000000;
+    
   
+    &:hover,
+    &:focus{
+      border: 2px solid #616161;
+    }
+  }
+  
+  .registration.form__input::placeholder{
+    color: #9c9c9a;
+  }
+  .btn {
+    width: 406px;
+    border-radius: 200px;
+  }

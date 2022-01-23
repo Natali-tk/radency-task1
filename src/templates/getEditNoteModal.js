@@ -1,20 +1,13 @@
-<div class="backdrop is-hidden" data-modal>
-  <div class="modal">
-    <div class="modal-button">
-      <button type="button" class="close-button" data-modal-close>
-        <svg class="close-button__icon" width="18" height="18">
-          <use href="./images//sprite.svg#icon-close"></use>
-        </svg>
-      </button>
-    </div>
-    <h2 class="title form">Fill Note</h2>
-    <form class="note form" >
+
+export default function getEditNote(note){
+    return `
+    <form class="note form" id="#edit-form">
       <input
         type="text"
         name="name"
         class="note form__input"
         placeholder="Name"
-        autocomplete="off"
+        value=${note.name}
         id="name"
         required
       /> 
@@ -22,8 +15,8 @@
         name="category"
         class="note form__select"
         id="category"
+        value=${note.category}
         placeholder="Category"
-        autocomplete="off"
       >
         <option  value="Task">Task</option>
         <option  value="Random Thought">Random Thought</option>
@@ -35,8 +28,8 @@
         name="content"
         class="note form__input"
         placeholder="Content"
-        autocomplete="off"
         id="content"
+        value=${note.content}
         required
       />
       <input
@@ -44,11 +37,9 @@
         name="dates"
         class="note form__input"
         placeholder="Dates format DD/MM/YYYY"
-        pattern = "[0-9]{2}\[0-9]{2}\[0-9]{4}"
-        autocomplete="off"
-        id="dates"
+        value=${note.dates}
       />
-      <button class="btn" id="btnSubmit" type="submit">Add note</button>
-    </form>
-  </div>
-</div>
+      <button class="btn edit" id="btn-edit" type="submit">Edit note</button>
+    </form>`;
+  
+}
